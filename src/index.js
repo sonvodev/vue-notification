@@ -1,7 +1,7 @@
 import Notifications from './Notifications.vue'
 import { events }    from './events'
 
-var Notify = {
+var VueNotify = {
   install(Vue, params = {}) {
     if (this.installed) {
       return
@@ -12,7 +12,7 @@ var Notify = {
 
     Vue.component('notifications', Notifications)
 
-    Vue.prototype.$notify = (params) => {
+    Vue.prototype.$vuenotify = (params) => {
       if (typeof params === 'string') {
         params = { title: '', text: params }
       }
@@ -24,4 +24,4 @@ var Notify = {
   }
 }
 
-export default Notify
+export default VueNotify

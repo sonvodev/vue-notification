@@ -158,7 +158,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 
 
-var Notify = {
+var VueNotify = {
   install: function install(Vue) {
     var params = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
@@ -183,7 +183,7 @@ var Notify = {
   }
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Notify);
+/* harmony default export */ __webpack_exports__["default"] = (VueNotify);
 
 /***/ }),
 /* 3 */
