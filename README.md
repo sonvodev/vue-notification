@@ -35,7 +35,7 @@ In App.vue:
 In any of your files:
 
 ```javascript
-this.$notify({
+this.$vuenotify({
   group: 'foo',
   title: 'Important message',
   text: 'Hello user! This is a notification!'
@@ -65,7 +65,7 @@ $ = `{enter: {opacity: [1, 0]}, leave: {opacity: [0, 1]}}`
 ### API
 
 ```javascript
-  this.$notify({
+  this.$vuenotify({
     // (optional)
     // Name of the notification holder
     group: 'foo',
@@ -96,7 +96,7 @@ Title and Text can be HTML strings.
 Also you can use simplified version:
 
 ```javascript
-this.$notify('text')
+this.$vuenotify('text')
 ```
 
 ### Groups
@@ -111,7 +111,7 @@ Example:
 ```
 
 ```javascript
-this.$notify({ group: 'auth', text: 'Wrong password, please try again later' })
+this.$vuenotify({ group: 'auth', text: 'Wrong password, please try again later' })
 ```
 
 ### Position
@@ -155,7 +155,7 @@ Structure:
     /*
     Style for specific type of notification, will be applied when you
     call notification with "type" parameter:
-    this.$notify({ type: 'my-type', message: 'Foo' })
+    this.$vuenotify({ type: 'my-type', message: 'Foo' })
     */
   }
 }
@@ -297,7 +297,7 @@ animation = {
 To remove all notifications, use `clean: true` parameter.
 
 ```javascript
-this.$notify({
+this.$vuenotify({
   group: 'foo',
   clean: true
 })
@@ -308,11 +308,11 @@ this.$notify({
 You will have to extend Vue type declaration:
 
 ```typescript
-import Notification from 'vue-notification';
+import Notifications from 'vue-notification';
 
 declare module 'vue/types/vue' {
   export interface Vue {
-    $notify: Notification;
+    $vuenotify: Notifications;
   }
 }
 ```
