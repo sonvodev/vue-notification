@@ -171,7 +171,7 @@ var Notify = {
 
     Vue.component('notifications', __WEBPACK_IMPORTED_MODULE_0__Notifications_vue___default.a);
 
-    Vue.prototype.$notify = function (params) {
+    Vue.prototype.$vuenotify = function (params) {
       if (typeof params === 'string') {
         params = { title: '', text: params };
       }
